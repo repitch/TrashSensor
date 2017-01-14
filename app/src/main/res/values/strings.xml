@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Trash Sensor</string>
+    <string name="connection_success">Удачное соединение</string>
+    <string name="connection_error">Неудачное соединение</string>
+    <string name="R.string.send_data">Отправить данные</string>
+
+    <string name="message" formatted="false">field1=%s&amp;field2=%s</string>
+    <string name="topic" formatted="false">channels/%s/publish/%s</string>
+    <string name="connection_progress">Загрузка...</string>
+</resources>

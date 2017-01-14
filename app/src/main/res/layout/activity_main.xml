@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.repitch.trashsensor.MainActivity">
+
+    <TextView
+        android:id="@+id/txt_connection_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/offset"
+        android:textSize="18sp"
+        android:text="Результат подключения"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/offset"
+        android:paddingRight="@dimen/offset">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/offset"
+            android:src="@drawable/ic_delete_black_24dp"
+            />
+
+        <EditText
+            android:id="@+id/edit_volume"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/offset"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:inputType="number"
+            android:text="75"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/offset"
+            android:text="%"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_volume_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/offset"
+        android:paddingLeft="@dimen/offset"
+        android:paddingRight="@dimen/offset"
+        android:text="Объем мусора должен быть в пределах от 0 до 100"
+        android:textColor="@color/error"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/offset"
+        android:paddingRight="@dimen/offset">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/offset"
+            android:src="@drawable/ic_thermometer_black_24dp"
+            />
+
+        <EditText
+            android:id="@+id/edit_temperature"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/offset"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:inputType="number"
+            android:text="26"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/offset"
+            android:text="°С"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_temperature_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/offset"
+        android:paddingLeft="@dimen/offset"
+        android:paddingRight="@dimen/offset"
+        android:text="Температура должна быть в пределах от -50 до 100"
+        android:textColor="@color/error"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+
+    <Button
+        android:id="@+id/btn_send_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/R.string.send_data"/>
+
+
+</LinearLayout>
