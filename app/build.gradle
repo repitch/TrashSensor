@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
 
 android {
     compileSdkVersion 25
@@ -16,6 +17,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 repositories {
@@ -24,11 +29,25 @@ repositories {
     }
 }
 
+// versions
+ext.supportVersion = '25.1.0'
+ext.retrofitVersion = '2.1.0'
+ext.ormliteVersion = '5.0'
+ext.pahoVersion = '1.0.2'
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:25.1.0'
+    compile "com.android.support:appcompat-v7:$supportVersion"
+    compile "com.android.support:design:$supportVersion"
+    compile "com.android.support:support-v13:$supportVersion"
+    compile "com.android.support:recyclerview-v7:$supportVersion"
 
-    compile('org.eclipse.paho:org.eclipse.paho.android.service:1.0.2') {
+    compile "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    compile "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+
+    compile "com.j256.ormlite:ormlite-android:$ormliteVersion"
+
+    compile("org.eclipse.paho:org.eclipse.paho.android.service:$pahoVersion") {
         exclude module: 'support-v4'
     }
 }

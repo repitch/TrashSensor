@@ -4,7 +4,11 @@
     <string name="connection_error">Неудачное соединение</string>
     <string name="R.string.send_data">Отправить данные</string>
 
-    <string name="message" formatted="false">field1=%s&amp;field2=%s</string>
-    <string name="topic" formatted="false">channels/%s/publish/%s</string>
-    <string name="connection_progress">Загрузка...</string>
+    <string name="topic" formatted="false">channels/%d/publish/%s</string>
+    <string name="broker_address">tcp://mqtt.thingspeak.com:1883</string>
+
+    <string name="api_key">D6OIEIT5E9EZ3WJU</string>
+    <string name="add_sensor">добавить сенсор</string>
+    <string name="no_sensors_text">Сенсоры отсутствуют</string>
+    <string name="loading">Загрузка…</string>
 </resources>

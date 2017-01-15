@@ -6,15 +6,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.repitch.trashsensor.MainActivity">
+    tools:context="com.repitch.trashsensor.ui.activity.ChannelActivity">
 
     <TextView
         android:id="@+id/txt_connection_result"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="@dimen/offset"
-        android:textSize="18sp"
-        android:text="Результат подключения"/>
+        android:text="Результат подключения"
+        android:textSize="18sp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -85,7 +85,7 @@
             android:layout_marginLeft="@dimen/offset"
             android:layout_weight="1"
             android:gravity="right"
-            android:inputType="number"
+            android:inputType="numberSigned"
             android:text="26"/>
 
         <TextView

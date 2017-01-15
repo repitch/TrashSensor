@@ -1,6 +1,8 @@
-package com.repitch.trashsensor;
+package com.repitch.trashsensor.model;
 
 import android.support.annotation.Nullable;
+
+import com.repitch.trashsensor.utils.CollectionUtils;
 
 import java.io.Serializable;
 import java.util.ArrayList;
